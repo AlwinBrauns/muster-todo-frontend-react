@@ -1,0 +1,15 @@
+@use 'src/_variables.scss' as vars;
+
+.Todo-container{
+  display: grid;
+  place-items: center;
+  padding: vars.$distance;
+  width: fit-content;
+  border-radius: 10px;
+  background-color: vars.$background;
+  box-shadow: 5px 5px 0px vars.$accent,
+  10px 10px 0px vars.$primary;
+  h1 {
+    color: vars.$primary
+  }
+}

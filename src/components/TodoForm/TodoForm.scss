@@ -1,0 +1,18 @@
+@use 'src/_variables.scss' as vars;
+
+.TodoForm{
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: vars.$distance;
+    input[type="text"]{
+      width: 100%;
+      max-width: 150px;
+    }
+    input {
+      margin: vars.$distance / 2;
+    }
+  }
+}

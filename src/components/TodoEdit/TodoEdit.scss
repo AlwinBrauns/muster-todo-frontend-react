@@ -1,0 +1,39 @@
+@use '/src/variables' as vars;
+.TodoEdit {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  height: 55vh;
+  width: 70vw;
+  min-width: 266px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(vars.$background, 0.7);
+  backdrop-filter: blur(4px);
+  border-radius: 20px;
+  form {
+    display: grid;
+    >*{
+      margin: vars.$distance / 3;
+    }
+  }
+  .button-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    >button{
+      width: 90%;
+    }
+    button:nth-child(1){
+      place-self: start;
+    }
+    button:nth-child(2){
+      place-self: end;
+      background-color: vars.$warning;
+      color: vars.$accent;
+      &:hover {
+        background-color: red;
+      }
+    }
+  }
+}

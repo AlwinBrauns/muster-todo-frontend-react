@@ -1,0 +1,48 @@
+@use '/src/variables' as vars;
+.TodoItem {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  place-items: center;
+
+  min-height: 70px;
+
+  user-select: none;
+
+  border-radius: 10px;
+
+  margin: vars.$distance / 2;
+
+  background-color: vars.$background;
+
+  box-shadow: 0px 0px 2px rgba(vars.$accent, 0.2);
+
+  >div{
+    padding: vars.$distance;
+    font-size: 1.05rem;
+  }
+  .content {
+    margin-top: 1px;
+  }
+  .lead {
+    position: relative;
+    &:after{
+      content: '';
+      width: 30px;
+      height: 30px;
+      border-radius: 5px;
+      background-color: rgba(vars.$primary, 0.07);
+
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+    }
+  }
+  .edit {
+    outline-color: vars.$primary;
+    padding: 5px;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+}
